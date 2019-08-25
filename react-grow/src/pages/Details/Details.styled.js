@@ -12,8 +12,6 @@ export const BackButton = styled(Button)`
     background: transparent;
     text-transform:uppercase;
     color: #666;
-    width: 85px;
-    padding: 0;
 `
 
 export const LeftArrow = styled.img`

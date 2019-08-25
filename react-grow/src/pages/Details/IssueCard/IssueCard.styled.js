@@ -44,6 +44,7 @@ export const SubTitle = styled.h4`
 `
 
 export const Description = styled.p`
+    height: 28px
     font-size: 12px;
     line-height: 14px;
     color: #333333;
@@ -60,10 +61,6 @@ export const Tag = styled(Button)`
     background: #FFFFFF;
     border: 1px solid ${p => p.color};
     border-radius: 5px;
-    padding: 3px 9px;
-    font-weight: 300;
     font-size: 11px;
     line-height: 13px;
-    width: initial;
-    height: initial;
 `

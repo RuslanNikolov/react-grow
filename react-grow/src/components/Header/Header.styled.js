@@ -62,4 +62,5 @@ export const SearchButton = styled(Button)`
     top: 38px;
     right: 25px;
     color: #FFFFFF;
+    padding: 7px 15px
 `
