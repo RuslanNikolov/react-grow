@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const RootApp = styled.div`
+export const App = styled.div`
     position: absolute;
     width: 1024px;
     height: 904px;
