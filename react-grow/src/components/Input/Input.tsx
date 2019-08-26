@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
 
-const SCInput = styled.input`
+const StyledInput = styled.input`
   background: #f5f5f5;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
@@ -14,7 +14,7 @@ interface IProps {
 }
 
 const Input = forwardRef((props: IProps, ref?: any) => {
-  return <SCInput {...props} ref={ref} type='text' />;
+  return <StyledInput {...props} ref={ref} type='text' />;
 });
 
 export default Input;

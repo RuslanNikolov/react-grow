@@ -44,7 +44,7 @@ export const SubTitle = styled.h4`
 `
 
 export const Description = styled.p`
-    height: 28px
+    height: 28px;
     font-size: 12px;
     line-height: 14px;
     color: #333333;

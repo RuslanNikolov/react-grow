@@ -1,20 +1,15 @@
 import React, { memo } from "react";
 import * as S from "./IssueCard.styled";
-import ProfilePicture from "./Profile.svg";
-import { IIssueCardMock } from "../IssueCardsMock";
+import { IIssueCardMock } from "./IssueCardsMock";
 
 interface IProps {
   mock: IIssueCardMock;
 }
 
 const IssueCard = ({ mock }: IProps) => {
-  const getProfilePictureUrl = (): string => {
-    return mock.ProfilePictureUrl ? `./assets${mock.ProfilePictureUrl}` : ProfilePicture;
-  };
-
   return (
     <S.Card>
-      <S.ProfilePicture src={getProfilePictureUrl()}></S.ProfilePicture>
+      <S.ProfilePicture src={mock.profilePicUrl}></S.ProfilePicture>
 
       <S.InfoWrapper>
         <S.Title>{mock.title}</S.Title>

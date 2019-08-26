@@ -2,7 +2,8 @@ import React from "react";
 import * as S from "./Details.styled";
 import LeftArrow from "./assets/LeftArrow.svg";
 import IssueCard from "./IssueCard/IssueCard";
-import IssueCardsMock from "./IssueCardsMock";
+import IssueCardsMock from "./IssueCard/IssueCardsMock";
+import Pagination from "./Pagination/Pagination";
 
 const Details = () => {
   return (
@@ -17,6 +18,9 @@ const Details = () => {
           <IssueCard key={idx} mock={mock} />
         ))}
       </S.IssueCardsList>
+
+      <S.HorizontalLine />
+      <Pagination pageHighlighted={2} />
     </S.Main>
   );
 };

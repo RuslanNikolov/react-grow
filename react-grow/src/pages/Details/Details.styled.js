@@ -3,6 +3,7 @@ import Button from '../../components/Button/Button'
 
 export const Main = styled.main`
    position: relative;
+   height: 804px;
 `
 
 export const BackButton = styled(Button)`
@@ -22,4 +23,16 @@ export const LeftArrow = styled.img`
 export const IssueCardsList = styled.div`
     position: absolute;
     top: 65px;
+`
+
+export const HorizontalLine = styled.hr`
+    position: absolute;
+    width: 974px;
+    text-align: center;
+    bottom: 67px;
+    margin:0 auto;
+    right:0;
+    left:0;
+    border-color: #DDD;
+    border-style: solid;
 `
