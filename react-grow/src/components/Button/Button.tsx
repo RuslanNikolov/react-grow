@@ -1,18 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const S = {
-  Button: styled.button`
-    padding: 3px 9px;
-    border-radius: 5px;
-    background: #2e7dfb;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    border: none;
-    cursor: pointer;
-  `
-};
+const StyledButton = styled.button`
+  padding: 3px 9px;
+  border-radius: 5px;
+  background: #2e7dfb;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  border: none;
+  cursor: pointer;
+`;
 
 interface IProps {
   children: string;
@@ -20,7 +18,7 @@ interface IProps {
 }
 
 const Button = ({ children, ...props }: IProps) => {
-  return <S.Button {...props}>{children}</S.Button>;
+  return <StyledButton {...props}>{children}</StyledButton>;
 };
 
 export default Button;
