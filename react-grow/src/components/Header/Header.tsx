@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, useRef } from "react";
+import React, { useState, ChangeEvent, useRef, useCallback } from "react";
 import * as S from "./Header.styled";
 import { Hyperlink } from "../../App.styled";
 import Ellipse from "./Ellipse.svg";
@@ -12,7 +12,10 @@ const Header: React.FC = () => {
     setSearchInputValue(target.value);
   };
 
-  const focusSearchInput = (): void => (searchInputRef.current as any).focus();
+  const focusSearchInput = useCallback((): void => {
+    (searchInputRef.current as any).focus()
+  }, [],
+  );
 
   return (
     <S.Header>
