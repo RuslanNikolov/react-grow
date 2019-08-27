@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
+import { Readonly } from '../../utils/Types'
 
 const StyledInput = styled.input`
   background: #f5f5f5;
@@ -13,7 +14,10 @@ interface IProps {
   [key: string]: any;
 }
 
-const Input = forwardRef((props: IProps, ref?: any) => {
+/**
+ * We use a forwardRef because input is a functional component
+ */
+const Input = forwardRef((props: Readonly<IProps>, ref?: any) => {
   return <StyledInput {...props} ref={ref} type='text' />;
 });
 

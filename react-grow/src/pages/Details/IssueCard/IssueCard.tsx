@@ -1,12 +1,14 @@
 import React, { memo } from "react";
 import * as S from "./IssueCard.styled";
 import { IIssueCardMock } from "./IssueCardsMock";
+import { Readonly } from '../../../utils/Types'
 
 interface IProps {
   mock: IIssueCardMock;
 }
 
-const IssueCard = ({ mock }: IProps) => {
+const IssueCard = (props: Readonly<IProps>) => {
+  const { mock } = props;
   return (
     <S.Card>
       <S.ProfilePicture src={mock.profilePicUrl}></S.ProfilePicture>

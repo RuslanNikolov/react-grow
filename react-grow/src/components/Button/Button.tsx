@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Readonly } from '../../utils/Types'
 
 const StyledButton = styled.button`
   padding: 3px 9px;
@@ -17,7 +18,7 @@ interface IProps {
   [key: string]: any;
 }
 
-const Button = ({ children, ...props }: IProps) => {
+const Button = ({ children, ...props }: Readonly<IProps>) => {
   return <StyledButton {...props}>{children}</StyledButton>;
 };
 

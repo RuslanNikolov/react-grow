@@ -1,20 +1,20 @@
 import pics from "./assets";
 
-interface ITag {
-  readonly name: string;
-  readonly color: string;
-}
+import { Readonly } from '../../../utils/Types'
 
 export interface IIssueCardMock {
-  readonly profilePicUrl: string;
-  readonly title: string;
-  readonly subTitle: string;
-  readonly description: string;
-  readonly ProfilePictureUrl?: string;
-  readonly tags: ITag[];
+  profilePicUrl: string;
+  title: string;
+  subTitle: string;
+  description: string;
+  ProfilePictureUrl?: string;
+  tags: {
+    name: string;
+    color: string;
+  }[];
 }
 
-const IssueCardsMock: IIssueCardMock[] = [
+const IssueCardsMock: Readonly<IIssueCardMock>[] = [
   {
     profilePicUrl: pics.ProfilePic_1,
     title: "Throw error while generating type and mutation base on mongoose schema",

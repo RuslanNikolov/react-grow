@@ -2,14 +2,15 @@ import React from "react";
 import * as S from "./Pagination.styled";
 import LeftArrow from "./assets/LeftArrow.svg";
 import RightArrow from "./assets/RightArrow.svg";
+import { Readonly } from '../../../utils/Types'
 
-const pages: number[] = [1, 2, 3, 4];
+const pages = [1, 2, 3, 4];
 
 interface IProps {
   pageHighlighted: number;
 }
 
-const Pagination = (props: IProps) => {
+const Pagination = (props: Readonly<IProps>) => {
   return (
     <S.Wrapper>
       <S.LeftArrow src={LeftArrow} alt='left arrow' />
