@@ -8,9 +8,9 @@ const Header: React.FC = () => {
   const [searchInputValue, setSearchInputValue] = useState("");
   const searchInputRef = useRef(null);
 
-  const onSearchInputChange = ({ target }: ChangeEvent<HTMLInputElement>): void => {
+  const onSearchInputChange = useCallback(({ target }: ChangeEvent<HTMLInputElement>): void => {
     setSearchInputValue(target.value);
-  };
+  }, []);
 
   const focusSearchInput = useCallback((): void => {
     (searchInputRef.current as any).focus()
